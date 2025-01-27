@@ -4,8 +4,8 @@
   <remote name="eld" fetch="https://github.com/eldorado-institute"/>
 
   <project path="device/eld/bpif3" name="device_bpif3" revision="aosp-14" remote="eld"/>
-  <!-- <remove-project name="platform/frameworks/base"/>
-  <project path="frameworks/base" name="frameworks_base" revision="arv-14" remote="arv"/> -->
+  <remove-project name="platform/frameworks/base"/>
+  <project path="frameworks/base" name="framework_bpfi3" revision="aosp-14" remote="eld"/>
   <remove-project name="platform/build/soong"/>  
   <project path="build/soong" name="build_soong" revision="aosp-14" remote="eld">
     <linkfile src="root.bp" dest="Android.bp" />
