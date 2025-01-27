@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="arv" fetch="https://github.com/android-risc-v"/>
+  <remote name="eld" fetch="https://github.com/eldorado-institute"/>
+
+  <project path="device/eld/bpif3" name="device_bpif3" revision="aosp-14" remote="eld"/>
+  <!-- <remove-project name="platform/frameworks/base"/>
+  <project path="frameworks/base" name="frameworks_base" revision="arv-14" remote="arv"/> -->
+  <remove-project name="platform/build/soong"/>  
+  <project path="build/soong" name="build_soong" revision="aosp-14" remote="eld">
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <remove-project name="platform/external/mesa3d"/>
+  <project path="external/mesa3d" name="external_mesa3d" revision="arv-14" remote="arv"/>
+
+  <project path="hardware/arv" name="hardware_arv" revision="arv-14" remote="arv"/>
+  <project path="vendor/arpi/RpLauncher" name="RpLauncher" revision="arpi-14" remote="arv"/>
+</manifest>
